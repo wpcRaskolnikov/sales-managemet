@@ -1,145 +1,82 @@
-#include"sale.h"
-//Ö÷º¯Êý
+#include"menu.h"
+#include"salesman.h"
+#include"product.h"
+#include"producer.h"
+#include"customer.h"
+#include"market.h"
+#include<iostream>
+using std::cin;
+using std::string;
+
 
 int main()
 {
-	int n;
+	int mainChoice, childChoice;
 	while (true)
 	{
-		switch (mainSelect())
+		mainWindow();
+		cin >> mainChoice;
+		switch (mainChoice)
 		{
 		case 1:
-			while (n = salesmanManage())
+			while (true)
 			{
-				Salesman* p = nullptr;
-				switch (n)
+				childWindow1();
+				cin >> childChoice;
+				if (!process1(childChoice))
 				{
-				case 1:
-					Add(p);
-					continue;
-				case 2:
-					Check(p);
-					continue;
-				case 3:
-					Alter(p);
-					continue;
-				case 4:
-					Delete(p);
-					continue;
-				case 5:
-					Traverse(p);
-					continue;
-				case 0:
 					break;
 				}
 			}
 			break;
 		case 2:
-			while (n = productManage())
+			while (true)
 			{
-				Product* p=nullptr;
-				switch (n)
+				childWindow2();
+				cin >> childChoice;
+				if (!process2(childChoice))
 				{
-				case 1:
-					Add(p);
-					continue;
-				case 2:
-					Check(p);
-					continue;
-				case 3:
-					Alter(p);
-					continue;
-				case 4:
-					Delete(p);
-					continue;
-				case 5:
-					Traverse(p);
-					continue;
-				case 0:
 					break;
 				}
 			}
 			break;
 		case 3:
-			while (n = sellerManage())
+			while (true)
 			{
-				Producer* p=nullptr;
-				switch (n)
+				childWindow3();
+				cin >> childChoice;
+				if (!process3(childChoice))
 				{
-				case 1:
-					Add(p);
-					continue;
-				case 2:
-					Check(p);
-					continue;
-				case 3:
-					Alter(p);
-					continue;
-				case 4:
-					Delete(p);
-					continue;
-				case 5:
-					Traverse(p);
-					continue;
-				case 0:
 					break;
 				}
 			}
 			break;
 		case 4:
-			while (n = customerManage())
+			while (true)
 			{
-				Customer* p=nullptr;
-				switch (n)
+				childWindow4();
+				cin >> childChoice;
+				if (!process4(childChoice))
 				{
-				case 1:
-					Add(p);
-					continue;
-				case 2:
-					Check(p);
-					continue;
-				case 3:
-					Alter(p);
-					continue;
-				case 4:
-					Delete(p);
-					continue;
-				case 5:
-					Traverse(p);
-					continue;
-				case 0:
 					break;
 				}
 			}
 			break;
 		case 5:
-			while (n = marketManage())
+			while (true)
 			{
-				Market* p=nullptr;
-				switch (n)
+				childWindow5();
+				cin >> childChoice;
+				if (!process5(childChoice))
 				{
-				case 1:
-					Add(p);
-					continue;
-				case 2:
-					Check(p);
-					continue;
-				case 3:
-					Alter(p);
-					continue;
-				case 4:
-					Delete(p);
-					continue;
-				case 5:
-					Traverse(p);
-					continue;
-				case 0:
 					break;
 				}
 			}
 			break;
 		case 0:
 			return 0;
+		default:
+			break;
 		}
 	}
 	return 0;

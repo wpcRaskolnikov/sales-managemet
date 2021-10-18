@@ -21,7 +21,8 @@ int main()
 		case 1:
 			while (true)
 			{
-				childWindow1();
+				childWindow1 childWindow1;
+				childWindow1.showChildWindow1();
 				cin >> childChoice;
 				if (!process1(childChoice))
 				{

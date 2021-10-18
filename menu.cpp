@@ -37,7 +37,7 @@ bool mainWindow()
 	return true;
 }
 
-bool childWindow1()
+bool childWindow1::showChildWindow1()
 {
 	system("cls"); /*«Â∆¡*/
 	cout << "\t\t ===================================\n";
@@ -46,6 +46,7 @@ bool childWindow1()
 	form();
 	return true;
 }
+
 
 bool childWindow2()
 {

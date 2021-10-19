@@ -19,15 +19,12 @@ int main()
 		switch (mainChoice)
 		{
 		case 1:
-			while (true)
-			{
-				childWindow1();
-				cin >> childChoice;
-				if (!process1(childChoice))
-				{
-					break;
-				}
-			}
+		{
+			salesmanWindow1 salesmanWindow1;
+			salesmanWindow1.salesmanWindow();
+			cin >> childChoice;
+			salesmanWindow1.runSalesmanWindow(childChoice);
+		}
 			break;
 		case 2:
 			while (true)

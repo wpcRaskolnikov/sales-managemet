@@ -5,7 +5,7 @@
 #include"customer.h"
 #include"market.h"
 #include<iostream>
-using std::cout;
+using namespace std;
 
 bool form()
 {
@@ -37,13 +37,32 @@ bool mainWindow()
 	return true;
 }
 
-bool childWindow1()
+
+bool salesmanWindow1::showSalesmanWindow1()
 {
 	system("cls"); /*清屏*/
 	cout << "\t\t ===================================\n";
 	cout << "\t\t│             人员管理             │\n";
 	cout << "\t\t ===================================\n";
 	form();
+	return true;
+}
+
+bool salesmanWindow1::salesmanWindow()
+{
+	showSalesmanWindow1();
+	return true;
+}
+
+bool salesmanWindow1::runSalesmanWindow(int childChoice)
+{
+	while (true)
+	{
+		if (!process1(childChoice))
+		{
+			break;
+		}
+	}
 	return true;
 }
 

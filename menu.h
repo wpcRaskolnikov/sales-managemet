@@ -10,7 +10,16 @@ const string CUSTOMER_FILE = "D:\\Customer.txt";
 const string MARKET_FILE = "D:\\Market.txt";
 
 bool mainWindow();
-bool childWindow1();
+
+class salesmanWindow1
+{
+public:
+	bool salesmanWindow();
+	bool runSalesmanWindow(int);
+private:
+	bool showSalesmanWindow1();
+};
+
 bool childWindow2();
 bool childWindow3();
 bool childWindow4();
